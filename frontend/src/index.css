@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@import "tailwindcss";
+
+/* ─── Accent Color Variable ─────────────────────────────────────────────────── */
+:root {
+  --accent-color: #005c55;
+  --accent-color-soft: #005c5533;
+}
+
+@theme {
+  /* ===== COLORS ===== */
+  --color-error: #ba1a1a;
+  --color-surface-container-highest: #d3e4fe;
+  --color-primary-fixed: #9cf2e8;
+  --color-inverse-on-surface: #eaf1ff;
+  --color-surface-container: #e5eeff;
+  --color-on-primary-fixed: #00201d;
+  --color-tertiary-fixed-dim: #93ccff;
+  --color-on-secondary-fixed: #111c2d;
+  --color-on-surface: #0b1c30;
+  --color-on-background: #0b1c30;
+  --color-background: #f8f9ff;
+  --color-on-surface-variant: #3e4947;
+  --color-surface: #f8f9ff;
+  --color-on-tertiary: #ffffff;
+  --color-outline-variant: #bdc9c6;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-primary-container: #0f766e;
+  --color-surface-container-high: #dce9ff;
+  --color-on-tertiary-container: #dbecff;
+  --color-inverse-surface: #213145;
+  --color-tertiary: #005683;
+  --color-on-secondary: #ffffff;
+  --color-secondary-fixed: #d8e3fb;
+  --color-on-error-container: #93000a;
+  --color-on-secondary-container: #586377;
+  --color-primary: #005c55;
+  --color-secondary-container: #d5e0f8;
+  --color-surface-container-low: #eff4ff;
+  --color-on-tertiary-fixed: #001d31;
+  --color-secondary: #545f73;
+  --color-surface-tint: #006a63;
+  --color-on-primary-container: #a3faef;
+  --color-surface-bright: #f8f9ff;
+  --color-on-secondary-fixed-variant: #3c475a;
+  --color-secondary-fixed-dim: #bcc7de;
+  --color-surface-dim: #cbdbf5;
+  --color-tertiary-fixed: #cce5ff;
+  --color-outline: #6e7977;
+  --color-on-primary: #ffffff;
+  --color-inverse-primary: #80d5cb;
+  --color-surface-variant: #d3e4fe;
+  --color-primary-fixed-dim: #80d5cb;
+  --color-tertiary-container: #006fa8;
+  --color-on-tertiary-fixed-variant: #004b73;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-primary-fixed-variant: #00504a;
+
+  /* ===== BORDER RADIUS ===== */
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* ===== SPACING ===== */
+  --spacing-space-base: 1rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-md: 0.75rem;
+  --spacing-margin-lg: 4rem;
+  --spacing-margin: 2rem;
+  --spacing-gutter-sm: 0.75rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-2xs: 0.125rem;
+  --spacing-margin-sm: 1rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-gutter-lg: 2rem;
+
+  /* ===== FONTS ===== */
+  --font-family-headline-md: 'Plus Jakarta Sans', sans-serif;
+  --font-family-headline-lg: 'Plus Jakarta Sans', sans-serif;
+  --font-family-body-lg: 'Inter', sans-serif;
+  --font-family-mono-metric: 'JetBrains Mono', monospace;
+  --font-family-label-md: 'Inter', sans-serif;
+  --font-family-mono-code: 'JetBrains Mono', monospace;
+  --font-family-display-mobile: 'Plus Jakarta Sans', sans-serif;
+  --font-family-body-md: 'Inter', sans-serif;
+  --font-family-body-sm: 'Inter', sans-serif;
+  --font-family-label-sm: 'Inter', sans-serif;
+  --font-family-display: 'Plus Jakarta Sans', sans-serif;
+  --font-family-headline-sm: 'Plus Jakarta Sans', sans-serif;
+
+  /* ===== FONT SIZES ===== */
+  --font-size-headline-md: 20px;
+  --line-height-headline-md: 28px;
+  --font-size-headline-lg: 24px;
+  --line-height-headline-lg: 32px;
+  --font-size-body-lg: 16px;
+  --line-height-body-lg: 24px;
+  --font-size-mono-metric: 11px;
+  --line-height-mono-metric: 14px;
+  --font-size-label-md: 13px;
+  --line-height-label-md: 16px;
+  --font-size-mono-code: 13px;
+  --line-height-mono-code: 18px;
+  --font-size-display-mobile: 28px;
+  --line-height-display-mobile: 36px;
+  --font-size-body-md: 14px;
+  --line-height-body-md: 22px;
+  --font-size-body-sm: 13px;
+  --line-height-body-sm: 18px;
+  --font-size-label-sm: 11px;
+  --line-height-label-sm: 14px;
+  --font-size-display: 40px;
+  --line-height-display: 48px;
+  --font-size-headline-sm: 16px;
+  --line-height-headline-sm: 24px;
+}
+
+/* ─── Dark Mode Color Overrides ──────────────────────────────────────────────
+   Applied when html[data-theme="dark"] is set.
+   Overrides the @theme light values above to a dark Material palette.
+───────────────────────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  /* Surfaces */
+  --color-background: #0d1117;
+  --color-surface: #0d1117;
+  --color-surface-bright: #1c2230;
+  --color-surface-dim: #0a0e14;
+  --color-surface-container-lowest: #080c12;
+  --color-surface-container-low: #111827;
+  --color-surface-container: #151e2c;
+  --color-surface-container-high: #1c2535;
+  --color-surface-container-highest: #232e40;
+  --color-surface-variant: #1e2d3d;
+  --color-surface-tint: #80d5cb;
+
+  /* On-surfaces */
+  --color-on-surface: #e2eaf4;
+  --color-on-background: #e2eaf4;
+  --color-on-surface-variant: #9aafc0;
+
+  /* Primary / Accent */
+  --color-primary: #80d5cb;
+  --color-on-primary: #00201d;
+  --color-primary-container: #00504a;
+  --color-on-primary-container: #a3faef;
+  --color-primary-fixed: #9cf2e8;
+  --color-primary-fixed-dim: #80d5cb;
+  --color-on-primary-fixed: #00201d;
+  --color-on-primary-fixed-variant: #00504a;
+  --color-inverse-primary: #005c55;
+
+  /* Secondary */
+  --color-secondary: #bbc6da;
+  --color-on-secondary: #253141;
+  --color-secondary-container: #3b4758;
+  --color-on-secondary-container: #d7e3f7;
+  --color-secondary-fixed: #d8e3fb;
+  --color-secondary-fixed-dim: #bcc7de;
+  --color-on-secondary-fixed: #111c2d;
+  --color-on-secondary-fixed-variant: #3c475a;
+
+  /* Tertiary */
+  --color-tertiary: #93ccff;
+  --color-on-tertiary: #003350;
+  --color-tertiary-container: #004b73;
+  --color-on-tertiary-container: #cce5ff;
+  --color-tertiary-fixed: #cce5ff;
+  --color-tertiary-fixed-dim: #93ccff;
+  --color-on-tertiary-fixed: #001d31;
+  --color-on-tertiary-fixed-variant: #004b73;
+
+  /* Outline */
+  --color-outline: #546772;
+  --color-outline-variant: #2c3a47;
+
+  /* Error */
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  /* Inverse surface */
+  --color-inverse-surface: #e2eaf4;
+  --color-inverse-on-surface: #2e3948;
+}
+
+/* ─── Accent Color CSS Variable Application ─────────────────────────────────
+   Use var(--accent-color) where the primary teal is used for custom accent.
+   We set this via JS from SettingsContext. The Tailwind classes still use
+   --color-primary which is set by the theme. We override key UI elements
+   that should follow the user's accent choice via this utility class.
+───────────────────────────────────────────────────────────────────────────── */
+.accent-bg {
+  background-color: var(--accent-color) !important;
+}
+.accent-text {
+  color: var(--accent-color) !important;
+}
+.accent-border {
+  border-color: var(--accent-color) !important;
+}
+.accent-ring {
+  --tw-ring-color: var(--accent-color);
+}
+.accent-bg-soft {
+  background-color: var(--accent-color-soft) !important;
+}
+
+/* ─── Disable Animations ─────────────────────────────────────────────────────
+   Applied when html[data-no-animations="true"] is set.
+───────────────────────────────────────────────────────────────────────────── */
+[data-no-animations="true"] *,
+[data-no-animations="true"] *::before,
+[data-no-animations="true"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+/* ─── Compact Results ────────────────────────────────────────────────────────
+   Applied via data attribute on body.
+───────────────────────────────────────────────────────────────────────────── */
+[data-compact="true"] .result-card {
+  padding: 0.5rem !important;
+  gap: 0.25rem !important;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Background Layer ───────────────────────────────────────────────────────
+   The #ps-bg-layer and #ps-bg-overlay divs are rendered in Layout.tsx
+   to show the background image + readability overlay.
+───────────────────────────────────────────────────────────────────────────── */
+#ps-bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ps-bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(248, 249, 255, 0.82);
+}
+
+[data-theme="dark"] #ps-bg-overlay {
+  background: rgba(13, 17, 23, 0.82);
+}
+
+/* Toggle switch styles */
+.ps-switch {
+  position: relative;
+  display: inline-flex;
+  width: 40px;
+  height: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.ps-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.ps-switch-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 11px;
+  background: var(--color-outline-variant, #bdc9c6);
+  transition: background 0.2s;
+}
+.ps-switch input:checked + .ps-switch-track {
+  background: var(--accent-color, #005c55);
+}
+.ps-switch-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.ps-switch input:checked ~ .ps-switch-thumb {
+  transform: translateX(18px);
+}

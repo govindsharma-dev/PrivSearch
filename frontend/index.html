@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrivSearch — Private Local Search</title>
+  <meta name="description" content="PrivSearch: a local-first, privacy-focused search engine powered by SearXNG. No tracking, no profiling, no accounts required." />
+  <!-- Theme init: apply saved theme BEFORE first paint to avoid flash -->
+  <script>
+    (function() {
+      try {
+        var raw = localStorage.getItem('privsearch_settings');
+        var theme = 'system';
+        if (raw) {
+          var s = JSON.parse(raw);
+          if (s && s.theme) theme = s.theme;
+        }
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = theme === 'dark' || (theme === 'system' && prefersDark);
+        if (isDark) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        // Apply accent color
+        if (raw) {
+          var ss = JSON.parse(raw);
+          if (ss && ss.accentColor) {
+            document.documentElement.style.setProperty('--accent-color', ss.accentColor);
+          }
+        }
+      } catch(e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
